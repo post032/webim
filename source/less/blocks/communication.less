@@ -1,0 +1,149 @@
+.communication {
+  box-sizing: border-box;
+  position: relative;
+  padding: 28px 28px 34px 28px;
+}
+
+.communication__text {
+  font-size: 10.24px;
+  font-family: "Ubuntu";
+  font-weight: normal;
+  color: rgb(57, 62, 107);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.communication__img1 {
+  width: 29px;
+  height: 29px;
+  background: url("../img/css_sprites.png") -206px -326px;
+}
+.communication__img2 {
+  width: 29px;
+  height: 29px;
+  background: url("../img/css_sprites.png") -157px -326px;
+}
+.communication__img3 {
+  width: 29px;
+  height: 29px;
+  background: url("../img/css_sprites.png") -10px -326px;
+}
+.communication__img4 {
+  width: 29px;
+  height: 29px;
+  background: url("../img/css_sprites.png") -108px -326px;
+}
+.communication__img5 {
+  width: 29px;
+  height: 29px;
+  background: url("../img/css_sprites.png") -255px -326px;
+}
+.communication__img6 {
+  width: 29px;
+  height: 29px;
+  background: url("../img/css_sprites.png") -352px -232px;
+}
+.communication__img7 {
+  width: 29px;
+  height: 29px;
+  background: url("../img/css_sprites.png") -59px -326px;
+}
+
+.communication__lists {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.communication__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 19px;
+}
+
+.communication__link {
+  font-size: 10.24px;
+  font-family: "Ubuntu";
+  color: rgb(13, 160, 136);
+  text-decoration: underline;
+  line-height: 1.2;
+  text-align: left;
+  font-weight: normal;
+  margin-left: 20px;
+}
+@media (min-width: @size-tablet) {
+  .communication {
+    width: 80%;
+  }
+
+  .communication__text {
+    font-size: 18px;
+    width: 65%;
+  }
+  .communication__img1 {
+    width: 40px;
+    height: 40px;
+    background: url("../img/css_sprites.png") -352px -10px;
+  }
+  .communication__img2 {
+    width: 40px;
+    height: 40px;
+    background: url("../img/css_sprites.png") -250px -266px;
+  }
+  .communication__img3 {
+    width: 40px;
+    height: 40px;
+    background: url("../img/css_sprites.png") -70px -266px;
+  }
+  .communication__img4 {
+    width: 40px;
+    height: 40px;
+    background: url("../img/css_sprites.png") -190px -266px;
+  }
+  .communication__img5 {
+    width: 40px;
+    height: 40px;
+    background: url("../img/css_sprites.png") -352px -70px;
+}
+  .communication__img6 {
+    width: 40px;
+    height: 40px;
+    background: url("../img/css_sprites.png") -10px -266px;
+  }
+  .communication__img7 {
+    width: 40px;
+    height: 40px;
+    background: url("../img/css_sprites.png") -130px -266px;
+  }
+
+  .communication__list {
+    margin-top: 45px;
+    width: 357px;
+  }
+
+  .communication__link {
+    font-size: 18px;
+    margin-left: 34px;
+}
+
+.communication__list br {
+  display: block;
+}
+}
+@media (min-width: 1100px) {
+.communication {
+  width: 1024px;
+  padding: 47px 0px;
+  padding-bottom: 60px;
+}
+.communication__lists {
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 26px;
+}
+}

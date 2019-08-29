@@ -1,0 +1,188 @@
+.menu {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0 28px;
+  min-height: 72px;
+}
+
+.menu__open {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 26px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: background 0.3s;
+}
+
+.menu__open {
+  width: 24px;
+}
+
+.menu__hide {
+  display: none;
+}
+
+.menu__open:focus {
+  outline: none;
+}
+
+.menu__open span {
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #3fd6bc;
+}
+
+.menu__open span::after,
+.menu__open span::before {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3fd6bc;
+  content: "";
+}
+
+.menu__open span::before {
+  top: -8px;
+}
+
+.menu__open span::after {
+  bottom: -8px;
+}
+
+.menu__open--htx {
+  background-color: #ffffff;
+}
+
+.menu__open--htx span {
+  transition: background 0s 0.3s;
+}
+
+.menu__open--htx span::after,
+.menu__open--htx span::before {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.menu__open--htx span::before {
+  transition-property: top, transform;
+}
+
+.menu__open--htx span::after {
+  transition-property: bottom, transform;
+}
+/* состояние active при открытом меню  */
+.menu__open--htx.is-active {
+  background-color: #ffffff;
+}
+
+.menu__open--htx.is-active span {
+  background: none;
+}
+
+.menu__open--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu__open--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.menu__open--htx.is-active span::after,
+.menu__open--htx.is-active span::before {
+  transition-delay: 0s, 0.3s;
+}
+
+.menu__logo {
+  text-align: center;
+  flex-grow: 1;
+  margin-right: 24px;
+  margin-top: 17px;
+}
+
+.menu__logo img {
+  width: 98px;
+  height: 24px;
+}
+@media (min-width: @size-tablet) {
+  .menu {
+    margin: 0;
+    min-height: 100px;
+    position: relative;
+
+  }
+
+  .menu::after {
+    content: "";
+      width: 674px;
+      height: 100%;
+      transform: skew(-69deg);
+      background: linear-gradient(45deg,#4ba0b4,#33dccc);
+      position: absolute;
+      top: 0;
+      left: -140px;
+      z-index: -1;
+  }
+
+  .menu::before {
+    content: "";
+    width: 110px;
+  height: 102px;
+  border-radius: 90%;
+  transform: skew(-69deg);
+  background: #33dccc;
+  position: absolute;
+  left: 466px;
+  top: 0;
+  z-index: -1;
+  }
+
+  .menu__open {
+    display: none;
+  }
+
+  .menu__hide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu__logo {
+    flex-grow: 0;
+    margin-right: 0;
+  }
+
+  .menu__logo img {
+    width: 116px;
+    height: 27px;
+  }
+}
+@media (min-width: @size-desktop) {
+  .menu {
+    padding: 0 70px;
+  }
+
+  .menu__logo {
+    margin-top: 10px;
+  }
+}

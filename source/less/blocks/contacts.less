@@ -1,0 +1,53 @@
+.contacts {
+  box-sizing: border-box;
+  position: relative;
+  width: 50%;
+  margin-left: 3%;
+}
+
+.contacts__phone a,
+.contacts__phone2 a,
+.contacts__address {
+  font-family: "Ubuntu";
+  font-weight: normal;
+  line-height: 1.2;
+  text-align: left;
+  letter-spacing: 0.3px;
+}
+
+.contacts__address {
+  font-size: 14px;
+  color: #adb0c2;
+}
+  .contacts__phone a {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-left: 43px;
+    color: #ffffff;
+  }
+
+  .contacts__phone2 a {
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .contacts__phone2 {
+    margin-top: 20px;
+  }
+
+
+.contacts__phone a::before {
+  content: "";
+  background: url("../img/phone.svg") no-repeat;
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+@media (min-width: 1100px) {
+  .contacts {
+    margin-left: 13%;
+  }
+}
